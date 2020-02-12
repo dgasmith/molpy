@@ -6,6 +6,8 @@ molpy
 
 A really cool molecule manipulation package.
 
+Hello GitHub!
+
 ### Copyright
 
 Copyright (c) 2020, Daniel Smith

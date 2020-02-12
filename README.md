@@ -6,6 +6,8 @@ molpy
 
 A really cool molecule manipulation package.
 
+We can also read XYZ files.
+
 ### Copyright
 
 Copyright (c) 2020, Daniel Smith

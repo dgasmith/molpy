@@ -30,4 +30,3 @@ def test_get_molecule_missing():
 
     with pytest.raises(FileNotFoundError):
         mol = molpy.data.get_molecule("non-existant")
-

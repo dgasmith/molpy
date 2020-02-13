@@ -31,6 +31,9 @@ def read_xyz(filename):
     data = data[2:]
     data = [x.split() for x in data]
     symbols = [x[0] for x in data]
-    xyz = np.array([[float(y) for y in x[1:]] for x in data])
+
+    xyz = []
+    for line in data:
+        xyz.append([float(line[1]), float(line[2]), float(line[3])])
 
     return {"symbols": np.array(symbols), "geometry": xyz}

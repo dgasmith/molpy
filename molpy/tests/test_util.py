@@ -18,12 +18,18 @@ def test_distance_failure():
 
 
 @pytest.mark.parametrize(
-    "molecule, com",
-    [("water", [9.81833333, 7.60366667, 12.673]), ("benzene", [-1.4045, 0, 0])],
+    "molecule, cog, natoms",
+    [("water", [9.81833333, 7.60366667, 12.673], 3), ("benzene", [-1.4045, 0, 0], 12)],
 )
-def test_read_xyz(molecule, com):
+def test_read_xyz(molecule, cog, natoms):
 
     mol = molpy.data.get_molecule(molecule)
-    print(np.mean(mol["geometry"], axis=0))
-    print(com)
-    assert np.allclose(np.mean(mol["geometry"], axis=0), com)
+    assert np.allclose(np.mean(mol["geometry"], axis=0), cog)
+    assert len(mol["geometry"]) == natoms
+    assert len(mol["symbols"]) == natoms
+
+def test_get_molecule_missing():
+
+    with pytest.raises(FileNotFoundError):
+        mol = molpy.data.get_molecule("non-existant")
+

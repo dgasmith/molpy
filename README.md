@@ -3,6 +3,8 @@ molpy
 [//]: # (Badges)
 [![Travis Build Status](https://travis-ci.com/dgasmith/molpy.svg?branch=master)](https://travis-ci.com/dgasmith/molpy)
 [![codecov](https://codecov.io/gh/dgasmith/molpy/branch/master/graph/badge.svg)](https://codecov.io/gh/dgasmith/molpy/branch/master)
+[![Documentation Status](https://readthedocs.org/projects/molpy-dgas/badge/?version=latest)](https://molpy-dgas.readthedocs.io/en/latest/?badge=latest)
+
 
 A really cool molecule manipulation package.
 
